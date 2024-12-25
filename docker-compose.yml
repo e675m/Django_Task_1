@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:2000
+    volumes:
+      - .:/app
+    ports:
+      - "2000:2000"
+    environment:
+      DEBUG: "1"
